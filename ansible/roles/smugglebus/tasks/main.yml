@@ -1,0 +1,8 @@
+---
+- name: Drop smugglebus files
+  ansible.builtin.copy:
+    src: smugglebus/
+    dest: "{{ smugglebus_install_dir }}/"
+    owner: root
+    group: root
+    mode: preserve
