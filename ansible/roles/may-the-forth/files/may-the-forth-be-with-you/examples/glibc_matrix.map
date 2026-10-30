@@ -1,0 +1,4 @@
+MATRIX_1.0 {
+    global: matrix_dependency_message; matrix_dependency_tls; matrix_dependency_tbss;
+    local: *;
+};

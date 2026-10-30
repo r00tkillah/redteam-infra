@@ -1,0 +1,7 @@
+HELLO_2.0 {
+    global:
+        wrong_anchor;
+        dependency_message;
+    local:
+        *;
+};

@@ -1,0 +1,11 @@
+---
+- name: Build may-the-forth toolkit
+  become: true
+  become_user: "{{ may_the_forth_owner }}"
+  when: may_the_forth_build
+  ansible.builtin.command:
+    argv:
+      - make
+      - "{{ may_the_forth_build_target }}"
+    chdir: "{{ may_the_forth_install_path }}"
+

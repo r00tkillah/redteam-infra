@@ -1,0 +1,9 @@
+---
+dependencies: []
+galaxy_info:
+  author: redteam-infra
+  description: Install and build the may-the-forth-be-with-you toolkit.
+  platforms:
+    - name: Debian
+    - name: Ubuntu
+

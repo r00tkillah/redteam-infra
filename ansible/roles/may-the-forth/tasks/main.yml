@@ -1,0 +1,31 @@
+---
+- name: Install may-the-forth toolchain
+  become: true
+  ansible.builtin.apt:
+    name: "{{ may_the_forth_packages }}"
+    state: present
+    update_cache: true
+
+- name: Create may-the-forth installation directory
+  become: true
+  ansible.builtin.file:
+    path: "{{ may_the_forth_install_path }}"
+    state: directory
+    owner: "{{ may_the_forth_owner }}"
+    group: "{{ may_the_forth_group }}"
+    mode: "0755"
+
+- name: Install complete may-the-forth source tree
+  become: true
+  ansible.builtin.copy:
+    src: may-the-forth-be-with-you/
+    dest: "{{ may_the_forth_install_path }}/"
+    owner: "{{ may_the_forth_owner }}"
+    group: "{{ may_the_forth_group }}"
+    mode: preserve
+  notify: Build may-the-forth toolkit
+
+- name: Build may-the-forth toolkit now when requested
+  ansible.builtin.meta: flush_handlers
+  when: may_the_forth_build
+

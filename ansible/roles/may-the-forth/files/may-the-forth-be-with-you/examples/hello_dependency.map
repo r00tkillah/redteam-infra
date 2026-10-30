@@ -1,0 +1,7 @@
+HELLO_1.0 {
+    global:
+        dependency_message;
+        dependency_tls_value;
+    local:
+        *;
+};

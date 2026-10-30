@@ -1,0 +1,12 @@
+{"version": 2, "width": 80, "height": 24, "timestamp": 1793224803, "idle_time_limit": 1.0, "env": {"SHELL": "/bin/bash", "TERM": "screen.xterm-256color"}}
+[0.021905, "o", "\u001b[?2004hdemo$ "]
+[3.121599, "o", "python3 tools/pack_standalone.py build/standalone_loader.template.bin build/hello_static_pie build/demo.bundle\r\n\u001b[?2004l\r"]
+[3.23834, "o", "\u001b[?2004hdemo$ "]
+[5.739058, "o", "python3 harness/py_harness.py --embedded build/demo.bundle --embedded-raw\r\n\u001b[?2004l\r"]
+[5.867118, "o", "hello from static demo elf\r\n"]
+[5.868699, "o", "\u001b[?2004hdemo$ "]
+[8.289239, "o", "build/standalone_launcher --embedded-raw build/demo.bundle\r\n\u001b[?2004l\r"]
+[8.302693, "o", "hello from static demo elf\r\n"]
+[8.302989, "o", "\u001b[?2004hdemo$ "]
+[10.912261, "o", "exit\r\n\u001b[?2004l\r"]
+[10.912521, "o", "exit\r\n"]

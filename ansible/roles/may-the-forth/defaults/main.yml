@@ -1,0 +1,19 @@
+---
+may_the_forth_install_path: /opt/may-the-forth-be-with-you
+may_the_forth_owner: root
+may_the_forth_group: root
+may_the_forth_build: true
+may_the_forth_build_target: build
+may_the_forth_packages:
+  - binutils
+  - bpfcc-tools
+  - build-essential
+  - git
+  - golang-go
+  - musl-tools
+  - nasm
+  - perl
+  - python3
+  - python3-bpfcc
+  - ruby
+
